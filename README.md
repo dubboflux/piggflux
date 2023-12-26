@@ -1,20 +1,20 @@
-[![Build Status](https://travis-ci.org/sqshq/PiggyMetrics.svg?branch=master)](https://travis-ci.org/sqshq/PiggyMetrics)
-[![codecov.io](https://codecov.io/github/sqshq/PiggyMetrics/coverage.svg?branch=master)](https://codecov.io/github/sqshq/PiggyMetrics?branch=master)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sqshq/PiggyMetrics/blob/master/LICENCE)
-[![Join the chat at https://gitter.im/sqshq/PiggyMetrics](https://badges.gitter.im/sqshq/PiggyMetrics.svg)](https://gitter.im/sqshq/PiggyMetrics?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/syuqtat/puppyMetrics.svg?branch=master)](https://travis-ci.org/syuqtat/puppyMetrics)
+[![codecov.io](https://codecov.io/github/syuqtat/puppyMetrics/coverage.svg?branch=master)](https://codecov.io/github/syuqtat/puppyMetrics?branch=master)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/syuqtat/puppyMetrics/blob/master/LICENCE)
+[![Join the chat at https://gitter.im/syuqtat/puppyMetrics](https://badges.gitter.im/syuqtat/puppyMetrics.svg)](https://gitter.im/syuqtat/puppyMetrics?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-# Piggy Metrics
+# puppy Metrics
 
-Piggy Metrics is a simple financial advisor app built to demonstrate the [Microservice Architecture Pattern](http://martinfowler.com/microservices/) using Spring Boot, Spring Cloud and Docker. The project is intended as a tutorial, but you are welcome to fork it and turn it into something else!
+puppy Metrics is a simple financial advisor app built to demonstrate the [Microservice Architecture Pattern](http://martinfowler.com/microservices/) using Spring Boot, Spring Cloud and Docker. The project is intended as a tutorial, but you are welcome to fork it and turn it into something else!
 
 <br>
 
 ![](https://cloud.githubusercontent.com/assets/6069066/13864234/442d6faa-ecb9-11e5-9929-34a9539acde0.png)
-![Piggy Metrics](https://cloud.githubusercontent.com/assets/6069066/13830155/572e7552-ebe4-11e5-918f-637a49dff9a2.gif)
+![puppy Metrics](https://cloud.githubusercontent.com/assets/6069066/13830155/572e7552-ebe4-11e5-918f-637a49dff9a2.gif)
 
 ## Functional services
 
-Piggy Metrics is decomposed into three core microservices. All of them are independently deployable applications organized around certain business domains.
+puppy Metrics is decomposed into three core microservices. All of them are independently deployable applications organized around certain business domains.
 
 <img width="880" alt="Functional services" src="https://cloud.githubusercontent.com/assets/6069066/13900465/730f2922-ee20-11e5-8df0-e7b51c668847.png">
 
@@ -60,7 +60,7 @@ PUT	| /notifications/settings/current	| Save current account notification settin
 ### Config service
 [Spring Cloud Config](http://cloud.spring.io/spring-cloud-config/spring-cloud-config.html) is horizontally scalable centralized configuration service for the distributed systems. It uses a pluggable repository layer that currently supports local storage, Git, and Subversion.
 
-In this project, we are going to use `native profile`, which simply loads config files from the local classpath. You can see `shared` directory in [Config service resources](https://github.com/sqshq/PiggyMetrics/tree/master/config/src/main/resources). Now, when Notification-service requests its configuration, Config service responses with `shared/notification-service.yml` and `shared/application.yml` (which is shared between all client applications).
+In this project, we are going to use `native profile`, which simply loads config files from the local classpath. You can see `shared` directory in [Config service resources](https://github.com/syuqtat/puppyMetrics/tree/master/config/src/main/resources). Now, when Notification-service requests its configuration, Config service responses with `shared/notification-service.yml` and `shared/application.yml` (which is shared between all client applications).
 
 ##### Client side usage
 Just build Spring Boot application with `spring-cloud-starter-config` dependency, autoconfiguration will do the rest.
@@ -77,7 +77,7 @@ spring:
 ```
 
 ##### With Spring Cloud Config, you can change application config dynamically. 
-For example, [EmailService bean](https://github.com/sqshq/PiggyMetrics/blob/master/notification-service/src/main/java/com/piggymetrics/notification/service/EmailServiceImpl.java) is annotated with `@RefreshScope`. That means you can change e-mail text and subject without rebuild and restart the Notification service.
+For example, [EmailService bean](https://github.com/syuqtat/puppyMetrics/blob/master/notification-service/src/main/java/com/puppymetrics/notification/service/EmailServiceImpl.java) is annotated with `@RefreshScope`. That means you can change e-mail text and subject without rebuild and restart the Notification service.
 
 First, change required properties in Config server. Then make a refresh call to the Notification service:
 `curl -H "Authorization: Bearer #token#" -XPOST http://127.0.0.1:8000/notifications/refresh`
@@ -97,7 +97,7 @@ Spring Cloud Security provides convenient annotations and autoconfiguration to m
 
 On the client side, everything works exactly the same as with traditional session-based authorization. You can retrieve `Principal` object from the request, check user roles using the expression-based access control and `@PreAuthorize` annotation.
 
-Each PiggyMetrics client has a scope: `server` for backend services and `ui` - for the browser. We can use `@PreAuthorize` annotation to protect controllers from  an external access:
+Each puppyMetrics client has a scope: `server` for backend services and `ui` - for the browser. We can use `@PreAuthorize` annotation to protect controllers from  an external access:
 
 ``` java
 @PreAuthorize("#oauth2.hasScope('server')")
@@ -122,7 +122,7 @@ zuul:
 
 ```
 
-That means all requests starting with `/notifications` will be routed to the Notification service. There is no hardcoded addresses, as you can see. Zuul uses [Service discovery](https://github.com/sqshq/PiggyMetrics/blob/master/README.md#service-discovery) mechanism to locate Notification service instances and also [Circuit Breaker and Load Balancer](https://github.com/sqshq/PiggyMetrics/blob/master/README.md#http-client-load-balancer-and-circuit-breaker), described below.
+That means all requests starting with `/notifications` will be routed to the Notification service. There is no hardcoded addresses, as you can see. Zuul uses [Service discovery](https://github.com/syuqtat/puppyMetrics/blob/master/README.md#service-discovery) mechanism to locate Notification service instances and also [Circuit Breaker and Load Balancer](https://github.com/syuqtat/puppyMetrics/blob/master/README.md#http-client-load-balancer-and-circuit-breaker), described below.
 
 ### Service Discovery
 
@@ -148,12 +148,12 @@ Also, Eureka provides a simple interface where you can track running services an
 #### Ribbon
 Ribbon is a client side load balancer which gives you a lot of control over the behaviour of HTTP and TCP clients. Compared to a traditional load balancer, there is no need in additional network hop - you can contact desired service directly.
 
-Out of the box, it natively integrates with Spring Cloud and Service Discovery. [Eureka Client](https://github.com/sqshq/PiggyMetrics#service-discovery) provides a dynamic list of available servers so Ribbon could balance between them.
+Out of the box, it natively integrates with Spring Cloud and Service Discovery. [Eureka Client](https://github.com/syuqtat/puppyMetrics#service-discovery) provides a dynamic list of available servers so Ribbon could balance between them.
 
 #### Hystrix
 Hystrix is the implementation of [Circuit Breaker Pattern](http://martinfowler.com/bliki/CircuitBreaker.html), which gives us a control over latency and network failures while communicating with other services. The main idea is to stop cascading failures in the distributed environment - that helps to fail fast and recover as soon as possible - important aspects of a fault-tolerant system that can self-heal.
 
-Moreover, Hystrix generates metrics on execution outcomes and latency for each command, that we can use to [monitor system's behavior](https://github.com/sqshq/PiggyMetrics#monitor-dashboard).
+Moreover, Hystrix generates metrics on execution outcomes and latency for each command, that we can use to [monitor system's behavior](https://github.com/syuqtat/puppyMetrics#monitor-dashboard).
 
 #### Feign
 Feign is a declarative Http client which seamlessly integrates with Ribbon and Hystrix. Actually, a single `spring-cloud-starter-feign` dependency and `@EnableFeignClients` annotation gives us a full set of tools, including Load balancer, Circuit Breaker and Http client with reasonable default configuration.
@@ -221,7 +221,7 @@ Here is a simple Continuous Delivery workflow, implemented in this project:
 
 <img width="880" src="https://cloud.githubusercontent.com/assets/6069066/14159789/0dd7a7ce-f6e9-11e5-9fbb-a7fe0f4431e3.png">
 
-In this [configuration](https://github.com/sqshq/PiggyMetrics/blob/master/.travis.yml), Travis CI builds tagged images for each successful git push. So, there are always the `latest` images for each microservice on [Docker Hub](https://hub.docker.com/r/sqshq/) and older images, tagged with git commit hash. It's easy to deploy any of them and quickly rollback, if needed.
+In this [configuration](https://github.com/syuqtat/puppyMetrics/blob/master/.travis.yml), Travis CI builds tagged images for each successful git push. So, there are always the `latest` images for each microservice on [Docker Hub](https://hub.docker.com/r/syuqtat/) and older images, tagged with git commit hash. It's easy to deploy any of them and quickly rollback, if needed.
 
 ## Let's try it out
 
@@ -251,4 +251,4 @@ If you'd like to start applications in Intellij Idea you need to either use [Env
 
 ## Contributions are welcome!
 
-PiggyMetrics is open source, and would greatly appreciate your help. Feel free to suggest and implement any improvements.
+puppyMetrics is open source, and would greatly appreciate your help. Feel free to suggest and implement any improvements.

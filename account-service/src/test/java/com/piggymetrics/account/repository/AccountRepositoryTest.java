@@ -1,10 +1,10 @@
-package com.piggymetrics.account.repository;
+package com.puppymetrics.account.repository;
 
-import com.piggymetrics.account.domain.Account;
-import com.piggymetrics.account.domain.Currency;
-import com.piggymetrics.account.domain.Item;
-import com.piggymetrics.account.domain.Saving;
-import com.piggymetrics.account.domain.TimePeriod;
+import com.puppymetrics.account.domain.Account;
+import com.puppymetrics.account.domain.Currency;
+import com.puppymetrics.account.domain.Item;
+import com.puppymetrics.account.domain.Saving;
+import com.puppymetrics.account.domain.TimePeriod;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.piggymetrics.monitoring;
+package com.puppymetrics.monitoring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

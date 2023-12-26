@@ -1,7 +1,7 @@
-package com.piggymetrics.statistics.client;
+package com.puppymetrics.statistics.client;
 
-import com.piggymetrics.statistics.domain.Currency;
-import com.piggymetrics.statistics.domain.ExchangeRatesContainer;
+import com.puppymetrics.statistics.domain.Currency;
+import com.puppymetrics.statistics.domain.ExchangeRatesContainer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

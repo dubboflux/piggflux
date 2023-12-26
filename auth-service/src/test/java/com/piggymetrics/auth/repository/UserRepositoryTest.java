@@ -1,7 +1,7 @@
-package com.piggymetrics.auth.repository;
+package com.puppymetrics.auth.repository;
 
-import com.piggymetrics.auth.domain.User;
-import com.piggymetrics.auth.service.security.MongoUserDetailsService;
+import com.puppymetrics.auth.domain.User;
+import com.puppymetrics.auth.service.security.MongoUserDetailsService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

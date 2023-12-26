@@ -100,7 +100,7 @@ input[type="text"], input[type="password"], textarea {
 }
 *:focus {outline:0px none transparent;}
 
-#bubble, #indicator, #save, #piggyicon, #rublesign, .arrowup, .arrowdown, .incomes-sprite-title, .close-sign, .modal-save-icon, #modaldeletecross, .initicons-arrow, .expenses-sprite-title, .savings-sprite-title, .triangle, .noUi-handle, .noUi-handle:after  {
+#bubble, #indicator, #save, #puppyicon, #rublesign, .arrowup, .arrowdown, .incomes-sprite-title, .close-sign, .modal-save-icon, #modaldeletecross, .initicons-arrow, .expenses-sprite-title, .savings-sprite-title, .triangle, .noUi-handle, .noUi-handle:after  {
 	background-size: 538px 84px;
 }
 #chooseicon, .itembackground, .iconbox, .itemlinebackground, #circle-select-1-back, #circle-select-2-back, #circle-select-3-back {
@@ -592,7 +592,7 @@ input {
 
 /* =============== SAVINGS SLIDER =============== */
 
-#piggyicon {
+#puppyicon {
 	background-position: -100px 0;
 	background-size: 538px 84px;
 	position: absolute;
@@ -2730,8 +2730,8 @@ input#deposit:checked + label.button:after, input#capitalization:checked + label
 	#incomeup, #incomedown, #expenseup, #expensedown {
 		bottom: 20px;
 	}
-	#piggy {
-		background: url("../images/piggy.gif") no-repeat;
+	#puppy {
+		background: url("../images/puppy.gif") no-repeat;
 		background-size: 149px 149px;
 		width: 149px;
 		height: 149px;

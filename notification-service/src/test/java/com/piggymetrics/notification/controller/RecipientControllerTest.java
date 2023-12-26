@@ -1,12 +1,12 @@
-package com.piggymetrics.notification.controller;
+package com.puppymetrics.notification.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
-import com.piggymetrics.notification.domain.Frequency;
-import com.piggymetrics.notification.domain.NotificationSettings;
-import com.piggymetrics.notification.domain.NotificationType;
-import com.piggymetrics.notification.domain.Recipient;
-import com.piggymetrics.notification.service.RecipientService;
+import com.puppymetrics.notification.domain.Frequency;
+import com.puppymetrics.notification.domain.NotificationSettings;
+import com.puppymetrics.notification.domain.NotificationType;
+import com.puppymetrics.notification.domain.Recipient;
+import com.puppymetrics.notification.service.RecipientService;
 import com.sun.security.auth.UserPrincipal;
 import org.junit.Before;
 import org.junit.Test;

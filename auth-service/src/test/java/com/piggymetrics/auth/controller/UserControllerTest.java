@@ -1,8 +1,8 @@
-package com.piggymetrics.auth.controller;
+package com.puppymetrics.auth.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.piggymetrics.auth.domain.User;
-import com.piggymetrics.auth.service.UserService;
+import com.puppymetrics.auth.domain.User;
+import com.puppymetrics.auth.service.UserService;
 import com.sun.security.auth.UserPrincipal;
 import org.junit.Before;
 import org.junit.Test;

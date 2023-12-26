@@ -1,12 +1,12 @@
-package com.piggymetrics.notification.service;
+package com.puppymetrics.notification.service;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.piggymetrics.notification.domain.Frequency;
-import com.piggymetrics.notification.domain.NotificationSettings;
-import com.piggymetrics.notification.domain.NotificationType;
-import com.piggymetrics.notification.domain.Recipient;
-import com.piggymetrics.notification.repository.RecipientRepository;
+import com.puppymetrics.notification.domain.Frequency;
+import com.puppymetrics.notification.domain.NotificationSettings;
+import com.puppymetrics.notification.domain.NotificationType;
+import com.puppymetrics.notification.domain.Recipient;
+import com.puppymetrics.notification.repository.RecipientRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

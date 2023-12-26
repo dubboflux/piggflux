@@ -1,4 +1,4 @@
-package com.piggymetrics.notification;
+package com.puppymetrics.notification;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,15 +1,15 @@
-package com.piggymetrics.statistics.controller;
+package com.puppymetrics.statistics.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
-import com.piggymetrics.statistics.domain.Account;
-import com.piggymetrics.statistics.domain.Currency;
-import com.piggymetrics.statistics.domain.Item;
-import com.piggymetrics.statistics.domain.Saving;
-import com.piggymetrics.statistics.domain.TimePeriod;
-import com.piggymetrics.statistics.domain.timeseries.DataPoint;
-import com.piggymetrics.statistics.domain.timeseries.DataPointId;
-import com.piggymetrics.statistics.service.StatisticsService;
+import com.puppymetrics.statistics.domain.Account;
+import com.puppymetrics.statistics.domain.Currency;
+import com.puppymetrics.statistics.domain.Item;
+import com.puppymetrics.statistics.domain.Saving;
+import com.puppymetrics.statistics.domain.TimePeriod;
+import com.puppymetrics.statistics.domain.timeseries.DataPoint;
+import com.puppymetrics.statistics.domain.timeseries.DataPointId;
+import com.puppymetrics.statistics.service.StatisticsService;
 import com.sun.security.auth.UserPrincipal;
 import org.junit.Before;
 import org.junit.Test;

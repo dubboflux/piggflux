@@ -133,9 +133,9 @@ only screen and (min-resolution: 144dpi) {
 	-ms-animation: 2s loadingspin;
 	animation: 2s loadingspin;
 }
-#piggy {
+#puppy {
 	display: block;
-	background: url("../images/piggy_large.gif") no-repeat;
+	background: url("../images/puppy_large.gif") no-repeat;
 	background-size: 178px 178px;
 	width: 178px;
 	height: 178px;
@@ -665,8 +665,8 @@ a#iconsfooter {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 144dpi) {
-	#piggy {
-		background-image: url("../images/piggy_large@2x.gif");
+	#puppy {
+		background-image: url("../images/puppy_large@2x.gif");
 	}
 	#logotext {
 		background-image: url("../images/logotext_large@2x.gif");

@@ -1,10 +1,10 @@
-package com.piggymetrics.notification.repository;
+package com.puppymetrics.notification.repository;
 
 import com.google.common.collect.ImmutableMap;
-import com.piggymetrics.notification.domain.Frequency;
-import com.piggymetrics.notification.domain.NotificationSettings;
-import com.piggymetrics.notification.domain.NotificationType;
-import com.piggymetrics.notification.domain.Recipient;
+import com.puppymetrics.notification.domain.Frequency;
+import com.puppymetrics.notification.domain.NotificationSettings;
+import com.puppymetrics.notification.domain.NotificationType;
+import com.puppymetrics.notification.domain.Recipient;
 import org.apache.commons.lang.time.DateUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
